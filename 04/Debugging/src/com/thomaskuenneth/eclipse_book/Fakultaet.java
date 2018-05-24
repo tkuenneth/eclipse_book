@@ -11,6 +11,9 @@ public class Fakultaet {
 	}
 
 	public static void main(String[] args) {
+		if (args.length < 1) {
+			System.exit(1);
+		}
 		int zahl = Integer.parseInt(args[0]);
 		int ergebnis = fakultaet(zahl);
 		System.out.print(zahl + "! = " + ergebnis);
