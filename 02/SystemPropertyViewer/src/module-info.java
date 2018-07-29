@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author tkuen
- *
- */
-module systemPropertyViewer {
-}
