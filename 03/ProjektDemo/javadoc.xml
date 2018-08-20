@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project default="javadoc">
     <target name="javadoc">
-        <javadoc access="public" author="false" classpath="." destdir="doc" doctitle="Dokumentation zu ProjektDemo" nodeprecated="false" nodeprecatedlist="false" noindex="true" nonavbar="false" notree="false" packagenames="com.thomaskuenneth" source="10" sourcepath="src" splitindex="false" use="false" version="true"/>
+        <javadoc 
+        	access="public" author="false" classpath="." 
+        	destdir="doc" doctitle="Dokumentation zu ProjektDemo" 
+        	nodeprecated="false" nodeprecatedlist="false" 
+        	noindex="true" nonavbar="false" notree="false" 
+        	packagenames="com.thomaskuenneth" source="10" 
+        	splitindex="false" use="false" 
+        	version="true">
+     	   <fileset dir="src" defaultexcludes="yes">
+     	         <include name="**/*.java"/>
+     	         <exclude name="**/module-info.java"/>
+     	    </fileset>
+      	   <fileset dir="../Hallo/src" defaultexcludes="yes">
+      	         <include name="**/*.java"/>
+      	         <exclude name="**/module-info.java"/>
+      	    </fileset>
+        	</javadoc>
     </target>
 </project>
