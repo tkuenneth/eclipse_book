@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.1" 
+	xmlns:fx="http://javafx.com/fxml/1" 
+	fx:controller="com.thomaskuenneth.javafxzahlenraten.ZahlenratenController">
+   <center>
+      <GridPane hgap="12.0" vgap="4.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" 
+                             hgrow="NEVER" minWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="60.0" 
+                             prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints fillHeight="false" valignment="BASELINE" 
+                          vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="false" valignment="BASELINE" 
+                          vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="false" 
+                          valignment="BASELINE" 
+                          vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Kleinste Zahl" GridPane.rowIndex="0" />
+            <Label text="Größte Zahl" GridPane.rowIndex="1" />
+            <Label text="Geratene Zahl" GridPane.rowIndex="2" />
+            <TextField fx:id="min" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="max" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="guess" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" 
+                             hgrow="SOMETIMES" minWidth="10.0" 
+                             prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" text="Raten"
+            	onAction="#handleGuessButtonAction" />
+            <Label fx:id="result" text="Label" GridPane.rowIndex="1">
+               <font>
+                  <Font size="64.0" />
+               </font></Label>
+         </children>
+         <padding>
+            <Insets top="16.0" />
+         </padding>
+      </GridPane>
+   </bottom>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+   </padding>
+</BorderPane>
