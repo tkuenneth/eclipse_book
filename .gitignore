@@ -4,3 +4,5 @@
 **/target/
 **/.metadata/
 **/.recommenders/
+**/build/*
+!**/build/build.xml
