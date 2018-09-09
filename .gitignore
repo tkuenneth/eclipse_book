@@ -4,7 +4,6 @@
 **/target/
 **/.metadata/
 **/.recommenders/
+**/.settings/
 **/build/*
 !**/build/build.xml
-
-08/JavaScriptDemo/.settings/*

@@ -1,0 +1,14 @@
+<div style="text-align: center">
+	<h1>{{ title }}</h1>
+	<form>
+		Kleinste Zahl:<br> <input type="number" name="min"
+			[(ngModel)]="min"><br> Gr&ouml;&szlig;te Zahl:<br>
+		<input type="number" name="max" [(ngModel)]="max"><br>
+		Geratene Zahl:<br> <input type="number" name="guess"
+			[(ngModel)]="guess">
+	</form>
+	<br>
+	<button (click)="onClickMe()">Raten</button>
+	<br>
+	<h1>{{clickMessage}}</h1>
+</div>
